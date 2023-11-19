@@ -1,0 +1,60 @@
+#navHolder{
+    background-color: rgba(248, 210, 143, 0.937);
+    height: 90px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+body{
+    background-image: url("/assets/images/first image.jpg");
+    background-color: rgb(250, 208, 144);
+    background-size: cover;
+  }
+
+#HomePage{
+    width: 100% ;
+    height: 100%;
+    background-size: cover;
+}
+h1 {
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(251, 218, 183);
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(248, 220, 184);
+}
+nav {
+    position: sticky;
+    top: 1px;
+    height: 90px;
+    background-color: rgba(77, 45, 6, 0.799);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav img{    
+    width: 130px;
+    padding: 10px;
+}
+p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255) ;
+    position: relative;
+    top: 50px;
+    font-weight: 600;
+}

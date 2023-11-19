@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link type="text/css" rel="stylesheet" href="\assets\styles\personalLibrary.css">
+</head>
+<body>
+   
+    <div class="background-container"></div>
+    <nav> 
+        <img src="\assets\images\Screenshot 2023-11-11 174200.png" >
+        <ul>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="GeneralLibrary.html">General</a></li>
+            <li><a href="Library.html">Library</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </ul>
+        <img id="vid" src="assets\images\Animation - 1700397626174.gif" >
+    </nav>
+
+    <table id="booksTbl">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- The table body is initially empty -->
+        </tbody>
+    </table>
+
+    <div id="removeModal" class="modal">
+        <div class="modal-content">
+            <h2 id="remove-title"></h2>
+            <p>Are you sure you want to remove this book?</p>
+            <p>
+                <button type="button" id="cancelRemoveBtn">Cancel</button>
+                <button type="button" id="confirmBtn">Confirm</button>
+            </p>
+        </div>
+    </div>
+    <div id="DirayOfTheKid"><iframe src="https://giphy.com/embed/2tX8wpWQ944q2n63n9" width="200px" height="200px" style="position:absolute" frameBorder="0" class="giphy-embed" ></iframe></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="\assets\scripts\personalLibrary.js"></script>
+    
+</html>

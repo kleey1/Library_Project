@@ -1,0 +1,97 @@
+
+form#RegisterForm{
+    
+    background-color: rgba(214, 168, 106, 0.825);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+}
+
+form#RegisterForm label,
+form#RegisterForm input,
+form#RegisterForm span,
+form#RegisterForm textarea {
+    width: 100%;
+    padding: 10px 1px;
+    
+}
+
+form#RegisterForm label {
+    font-weight:bold;
+}
+
+form#RegisterForm p#login{
+    font-weight: 200;
+    font-size:15px;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+form#RegisterForm input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#FormContainer{
+    margin-top:100px;
+}
+form#RegisterForm button {
+    background-color: #967259c3;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form#RegisterForm button:hover {
+    background-color: rgb(109, 78, 20);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+form#RegisterForm span{
+    color: whitesmoke;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+form#RegisterForm div{
+    margin-bottom: 20px;
+}
+body{
+    background-image: url("/assets/images/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+}
+
+nav {
+    position: sticky;
+    top: 1px;
+    height: 90px;
+    background-color: rgba(77, 45, 6, 0.799);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav img{    
+    width: 130px;
+    padding: 10px;
+}

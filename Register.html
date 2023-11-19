@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--- HELLO-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link type="text/css" rel="stylesheet" href="\assets\styles\register.css">
+</head>
+<body>
+    <nav>      
+        <img src="\assets\images\Screenshot 2023-11-11 174200.png"  >   
+         <ul>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="GeneralLibrary.html">General</a></li>
+            <li><a href="Library.html">Library</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </ul>
+        <img id="vid" src="assets\images\Animation - 1700397626174.gif" >
+
+    </nav>
+     <div id="FormContainer">
+    <form id="RegisterForm">
+        <div> 
+            <label for="userName">Username</label>
+            <input type="text" id="userName" name="userName" placeholder="Your username">
+            <span id="userNameSpn"></span>
+        </div>
+
+        <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address">
+            <span id="emailSpn"></span>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Your password">
+            <span id="PasswordSpn"></span>
+        </div>
+
+        <div>
+            <button id="RegisterBtn" action="Main.html">Register</button>
+        </div>
+
+        <div id="loginLabel">
+            <p id="login" for="login"> Already have an account? <a href="Login.html">Login</a></p>
+        </div>
+        
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="\assets\scripts\register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    margin: 25px;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevents horizontal scrollbar due to background image */
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('/assets/images/Pic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+#booksTbl th {
+    color:rgb(197, 185, 169)
+}
+#booksTbl td {
+    background-color: rgba(164, 145, 96, 0.847);
+    color: rgb(255, 240, 240);
+}
+table#booksTbl{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav {
+position: sticky;
+top: 1px;
+height: 90px;
+background-color: rgba(77, 45, 6, 0.799);
+color: rgb(255, 255, 255);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+nav ul li {
+display: inline;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 17px;
+font-weight: 600;
+}
+nav ul li a {
+color: white;
+text-decoration: none;
+padding: 10px;
+}
+nav img{    
+width: 130px;
+padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
+}
+
+th, td {
+    border: 2px solid rgb(92, 63, 27);
+    border-radius: 4px;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #464544;
+    color: rgb(37, 15, 15);
+}
+
+button{
+background-color:rgb(178, 150, 114);
+border: 1px solid lightgrey;
+border-radius: 4px;
+color:antiquewhite;
+padding: 8px 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 13px;
+transition-duration: 0.4s;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+background-color:burlywood;
+color: white;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.header-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 6% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 50%;
+font-family: 'Times New Roman', Times, serif;
+font-size: 15px;
+font-weight:540;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+#DirayOfTheKid{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+}
