@@ -1,6 +1,5 @@
 const booksTableBody = $("#booksTbl tbody");
 booksTableBody.empty();
-var personalList=[];
 
 //Array contains books stored for Personal Library
 var BooksToAdd = JSON.parse(localStorage.getItem('addedBooks')) || [];
