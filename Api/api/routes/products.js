@@ -17,7 +17,7 @@ else{
 
 const storage= multer.diskStorage({
     destination: function (req , file , cb ){
-        cb(null , './assets/images' );
+        cb(null , '../assets/images' );
     },
     filename: function ( req, file , cb){
         cb(null, file.originalname);
@@ -126,7 +126,7 @@ router.delete("/:productID",(req,res,next)=>
 
 });
 
-router.patch("/:productID", (req,res,next)=>{ // router not finished , left the vid 30:20  , continue there 
+router.patch("/:productID",upload.single('productImage'), (req,res,next)=>{ // router not finished , left the vid 30:20  , continue there 
     const id =req.params.productID;
     const updateOPS= {};
     for (const ops of req.body){
