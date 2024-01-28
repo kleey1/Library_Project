@@ -1,22 +1,24 @@
-
 const booksDiv = $("#booksdiv");
 var productList=[];
-let booksAded=[];
+var booksAdded = JSON.parse(localStorage.getItem('addedBooks')) || [];
 //--------------------------------------------------------------------------------------------------
 
 // Function to fetch product data from the API
 function fetchProductData() {
-    fetch('http://localhost:3000/product')
+    fetch('http://localhost:3000/product') //kjo url ktu ehst url qe perdoret ke routes , me pak llaf ajo qe bejm test ke postman
+    //fetch kerkon per ket specific url qe t marri response| me .then() vendosim se ca do bejm me the response
+    //like fetch url (kjo lart) , .then() excute kdoing inside 
         .then(response => {
             if (response.ok) {
                 return response.json();
             } else {
                 throw new Error('Network response was not ok');
-            }
+            }//tani kjo data esht formati data qe na vjen neve . esht object so we access it like obj
         }).then(data=> {
-            productList= data.product
-            console.log(productList)
+            productList= data.product //kam ber i global variable qe ta perdor edhe me von the response 
+            console.log(productList) //shife ktu 
 
+            //tani pak a shum kshu do behen edhe t tjerat , qe ti besh add ke personal library andstuff
             productList.forEach(e =>{
     
         const newDivHtml = `<div class="parent">
@@ -58,7 +60,7 @@ $("#ConfirmBtn").click(function(){
     var alreadyAdded = false;
     var searchTitle = $("#add-book").text();
 
-    productList.forEach(function(product) {
+    booksAdded.forEach(function(product) {
         if(product.title == searchTitle){
         console.log(`Already added = ${searchTitle}`);
         alreadyAdded = true;
@@ -73,11 +75,16 @@ $("#ConfirmBtn").click(function(){
     productList.forEach(function(product) {
         if(product.title == searchTitle)
          foundProduct = product;
+         console.log(`Found = ${searchTitle}`);
     });
     
     if(foundProduct){
-      console.log(`Personal Library array: ${booksAded}`);
-      booksAded.push(foundProduct);
+      console.log(`Personal Library before: ${booksAdded}`);
+      const jsonString = JSON.stringify(foundProduct);
+      console.log(`Book = ${jsonString}`);
+      booksAdded.push(foundProduct);
+      console.log(`Personal Library after: ${booksAdded}`);
+      localStorage.setItem('addedBooks', JSON.stringify(booksAdded));
     }
     $("#addModal").hide();
 });
