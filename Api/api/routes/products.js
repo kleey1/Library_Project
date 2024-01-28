@@ -17,7 +17,7 @@ else{
 
 const storage= multer.diskStorage({
     destination: function (req , file , cb ){
-        cb(null , './someDST' );
+        cb(null , './assets/images' );
     },
     filename: function ( req, file , cb){
         cb(null, file.originalname);
@@ -34,21 +34,18 @@ const product = require('../models/product');
 
 router.get('/' , (req,res,next)=> {
   product.find()
-  .select('name price _id productImage') // feetchs only the specified things , best way to control the info returned 
+  .select('title author category _id productImage') // feetchs only the specified things , best way to control the info returned 
   .exec()
   .then(docs =>{  // we strructered the response in the way we wanted, here we put the "form" of how we wanted our response to look like.
     const response ={
         count: docs.length ,
         product: docs.map(doc => {
             return{
-                name: doc.name ,
-                price: doc.price,
+                title: doc.title ,
+                category: doc.category,
+                author: doc.author,
                 _id: doc._id,
                 productImage: doc.productImage,
-                request: {
-                    type: "GET",
-                    url : 'localhost:3000/product/'+ doc._id
-                }
             }
         })
     }
@@ -66,7 +63,7 @@ router.get('/' , (req,res,next)=> {
 router.get('/:productID' , (req,res,next)=> {
     const id = req.params.productID ;
     product.findById(id)
-    .select('name price _id productImage')
+    .select('title author category _id productImage')
     .exec()
     .then(doc =>{
         console.log(doc) ; // making a res inside the then or catch block as res runs asyncronsly, this way we ensure that the process is terminated before res runs.
@@ -85,12 +82,13 @@ router.get('/:productID' , (req,res,next)=> {
     });
 }); 
 
-router.post('/' ,upload.single('productIMG'), (req,res,next)=> {
+router.post('/' ,upload.single('productImage'), (req,res,next)=> {
 const product = new Product ({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name ,
-        price: req.body.price ,
-        productImage: req.file.path 
+        title: req.body.title ,
+        author: req.body.author,
+        category: req.body.category ,
+        productImage: req.file.path
 });
 
     product.save()
